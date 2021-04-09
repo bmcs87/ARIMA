@@ -1,0 +1,100 @@
+####Southwest
+southwest <- read.csv("SWAARIMA.csv")
+
+#Packages
+install.packages("ggplot2")
+install.packages("forecast")
+install.packages("tseries")
+library('ggplot2', 'forecast', 'tseries')
+
+####Clicks
+#ACF & ARIMA Code
+acf(southwest$Clicks)
+forecast::auto.arima(southwest$Clicks)
+fit.clicks <-forecast::auto.arima(southwest$Clicks)
+
+#Values Output
+forecastedvalues.clicks <- forecast::forecast(fit.clicks, 90)
+print(forecastedvalues.clicks)
+
+#Plot
+plot(forecastedvalues.clicks)
+
+
+####Revenue
+#ACF & ARIMA Code
+acf(southwest$Revenue)
+forecast::auto.arima(southwest$Revenue)
+fit.revenue <-forecast::auto.arima(southwest$Revenue)
+
+#Values Output
+forecastedvalues.revenue <- forecast::forecast(fit.revenue, 90)
+print(forecastedvalues.revenue)
+
+#Plot
+plot(forecastedvalues.revenue)
+
+
+####CPC
+#ACF & ARIMA Code
+acf(southwest$CPC)
+forecast::auto.arima(southwest$CPC)
+fit.CPC <-forecast::auto.arima(southwest$CPC)
+
+#Values Output
+forecastedvalues.CPC <- forecast::forecast(fit.CPC, 90)
+print(forecastedvalues.CPC)
+
+#Plot
+plot(forecastedvalues.CPC)
+
+
+####AIr Travel
+air <- read.csv("AirARIMA.csv")
+
+#Packages
+install.packages("ggplot2")
+install.packages("forecast")
+install.packages("tseries")
+library('ggplot2', 'forecast', 'tseries')
+
+####Clicks
+#ACF & ARIMA Code
+acf(air$Clicks)
+forecast::auto.arima(air$Clicks)
+fit.clicks <-forecast::auto.arima(air$Clicks)
+
+#Values Output
+forecastedvalues.clicks <- forecast::forecast(fit.clicks, 90)
+print(forecastedvalues.clicks)
+
+#Plot
+plot(forecastedvalues.clicks)
+
+
+####Revenue
+#ACF & ARIMA Code
+acf(air$Revenue)
+forecast::auto.arima(air$Revenue)
+fit.revenue <-forecast::auto.arima(air$Revenue)
+
+#Values Output
+forecastedvalues.revenue <- forecast::forecast(fit.revenue, 90)
+print(forecastedvalues.revenue)
+
+#Plot
+plot(forecastedvalues.revenue)
+
+
+####CPC
+#ACF & ARIMA Code
+acf(air$CPC)
+forecast::auto.arima(air$CPC)
+fit.CPC <-forecast::auto.arima(air$CPC)
+
+#Values Output
+forecastedvalues.CPC <- forecast::forecast(fit.CPC, 90)
+print(forecastedvalues.CPC)
+
+#Plot
+plot(forecastedvaluesrevenue)
