@@ -49,7 +49,22 @@ print(forecastedvalues.CPC)
 plot(forecastedvalues.CPC)
 
 
-####AIr Travel
+#####SRPVs
+#ACF & ARIMA Code
+acf(southwest$SPRVs)
+forecast::auto.arima(southwest$SPRVs)
+fit.SPRVs <-forecast::auto.arima(southwest$SPRVs)
+
+#Values Output
+forecastedvalues.SPRVs <- forecast::forecast(fit.SPRVs, 90)
+print(forecastedvalues.SPRVs)
+
+#Plot
+plot(forecastedvalues.SPRVs)
+
+
+
+####Air Travel
 air <- read.csv("AirARIMA.csv")
 
 #Packages
@@ -98,3 +113,17 @@ print(forecastedvalues.CPC)
 
 #Plot
 plot(forecastedvaluesrevenue)
+
+
+#####SRPVs
+#ACF & ARIMA Code
+acf(air$SPRVs)
+forecast::auto.arima(air$SPRVs)
+fit.SPRVs <-forecast::auto.arima(air$SPRVs)
+
+#Values Output
+forecastedvalues.SPRVs <- forecast::forecast(air.SPRVs, 90)
+print(forecastedvalues.SPRVs)
+
+#Plot
+plot(forecastedvalues.SPRVs)
