@@ -51,16 +51,16 @@ plot(forecastedvalues.CPC)
 
 #####SRPVs
 #ACF & ARIMA Code
-acf(southwest$SPRVs)
-forecast::auto.arima(southwest$SPRVs)
-fit.SPRVs <-forecast::auto.arima(southwest$SPRVs)
+acf(southwest$SRPVs)
+forecast::auto.arima(southwest$SRPVs)
+fit.SRPVs <-forecast::auto.arima(southwest$SRPVs)
 
 #Values Output
-forecastedvalues.SPRVs <- forecast::forecast(fit.SPRVs, 90)
-print(forecastedvalues.SPRVs)
+forecastedvalues.SRPVs <- forecast::forecast(fit.SRPVs, 90)
+print(forecastedvalues.SRPVs)
 
 #Plot
-plot(forecastedvalues.SPRVs)
+plot(forecastedvalues.SRPVs)
 
 
 
@@ -112,18 +112,18 @@ forecastedvalues.CPC <- forecast::forecast(fit.CPC, 90)
 print(forecastedvalues.CPC)
 
 #Plot
-plot(forecastedvaluesrevenue)
+plot(forecastedvalues.CPC)
 
 
 #####SRPVs
 #ACF & ARIMA Code
-acf(air$SPRVs)
-forecast::auto.arima(air$SPRVs)
-fit.SPRVs <-forecast::auto.arima(air$SPRVs)
+acf(air$SRPVs)
+forecast::auto.arima(air$SRPVs)
+fit.SRPVs <-forecast::auto.arima(air$SRPVs)
 
 #Values Output
-forecastedvalues.SPRVs <- forecast::forecast(air.SPRVs, 90)
-print(forecastedvalues.SPRVs)
+forecastedvalues.SRPVs <- forecast::forecast(fit.SRPVs, 90)
+print(forecastedvalues.SRPVs)
 
 #Plot
-plot(forecastedvalues.SPRVs)
+plot(forecastedvalues.SRPVs)
